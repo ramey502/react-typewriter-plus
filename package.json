@@ -17,8 +17,7 @@
     "component"
   ],
   "scripts": {
-    "build": "vite build && tsc",
-    "start": "vite"
+    "build": "vite build && tsc"
   },
   "author": "ramey502",
   "license": "MIT",
@@ -27,11 +26,15 @@
     "react-dom": ">=17.0.0"
   },
   "devDependencies": {
+    "@types/katex": "^0.16.7",
     "@types/node": "^22.10.2",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
+    "dompurify": "^3.2.3",
     "eslint": "^9.17.0",
+    "katex": "^0.16.17",
+    "marked": "^15.0.4",
     "typescript": "^5.7.2",
     "vite": "^6.0.3"
   }
