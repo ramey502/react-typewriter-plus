@@ -18,6 +18,12 @@ export default defineConfig({
           react: "React",
           "react-dom": "ReactDOM",
         },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.names.includes("react-typewriter-plus.css")) {
+            return "assets/style.[extname]";
+          }
+          return "assets/[name].[extname]";
+        },
       },
     },
   },

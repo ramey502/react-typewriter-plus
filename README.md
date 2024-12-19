@@ -4,26 +4,14 @@
 
 ## Demo
 
-### Typewriter Effect
-
-To showcase the typing effect, you can use the `Typewriter` component or the `useTypewriter` hook. Below is a live demonstration of the effect, with customizable options for speed, cursor visibility, and more.
-
 ![screenshot](https://github.com/ramey502/react-typewriter-plus/blob/master/docs/screenshot.gif)
-
-### Typewriter Plus Features
-
-1. **Typing Speed**: Controls how fast the text appears on the screen.
-2. **Looping**: Make the typing effect loop infinitely, or stop after finishing.
-3. **Cursor**: Show or hide the blinking cursor.
-4. **Custom Loading Node**: Display a loading animation or text while the typing effect is being prepared.
 
 ## Installation
 
-To install `React Typewriter Plus`, simply use npm or pnpm.
+To install `React Typewriter Plus`, simply use npm.
 
 ```bash
 npm install react-typewriter-plus
-pnpm install react-typewriter-plus
 ```
 
 #### Example Usage:

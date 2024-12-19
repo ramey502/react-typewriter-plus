@@ -1,6 +1,6 @@
 {
   "name": "react-typewriter-plus",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "React component and hook for animated typewriter effects, supporting plain text, Markdown, and HTML content.",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -21,9 +21,19 @@
     "typing effect"
   ],
   "scripts": {
-    "build": "vite build && tsc"
+    "build": "vite build && tsc",
+    "dev": "vite"
   },
   "author": "ramey502",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramey502/react-typewriter-plus.git",
+    "directory": "packages/plugin-react"
+  },
+  "bugs": {
+    "url": "https://github.com/ramey502/react-typewriter-plus/issues"
+  },
+  "homepage": "https://github.com/ramey502/react-typewriter-plus/blob/master#readme",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=17.0.0",

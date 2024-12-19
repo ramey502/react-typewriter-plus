@@ -4,7 +4,7 @@ import "katex/dist/katex.min.css"; // 引入 KaTeX 样式
 import { marked, Tokens } from "marked";
 import React, { useEffect, useRef, useState } from "react";
 import LoadingDots from "../components/LoadingDots";
-import TextAnimator from "../libs/TextAnimator";
+import TextAnimator from "../helper/TextAnimator";
 
 export interface UseTypewriterOptions {
   type?: "text" | "md" | "html"; // 文本类型
