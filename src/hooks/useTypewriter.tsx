@@ -7,7 +7,7 @@ import LoadingDots from "../components/LoadingDots";
 import TextAnimator from "../libs/TextAnimator";
 
 export interface UseTypewriterOptions {
-  type?: "text" | "html" | "markdown";
+  type?: "text" | "md" | "html"; // 文本类型
   speed?: number; // 打字速度
   loop?: boolean; // 是否循环播放
   cursor?: boolean; // 是否显示光标
@@ -72,8 +72,11 @@ const parseMarkdownWithMath = (content: string) => {
 /**
  * 渲染文本内容（支持 Markdown 和 HTML）
  */
-const parseContent = (content: string, type: "html" | "markdown") => {
-  if (type === "markdown") {
+const parseContent = (
+  content: string,
+  type: "html" | "md" | "text" = "text"
+) => {
+  if (type === "md") {
     return parseMarkdownWithMath(content);
   }
   if (type === "html") {
@@ -98,7 +101,7 @@ export const useTypewriter = (
   options: Partial<UseTypewriterOptions> = {}
 ): string | React.ReactNode => {
   const {
-    type = "text",
+    type,
     speed,
     loop,
     cursor,
@@ -148,17 +151,15 @@ export const useTypewriter = (
     return <LoadingDots text={loadingNode} />;
   }
 
-  const parsedContent = parseContent(displayText, type || "text");
+  const parsedContent = parseContent(displayText, type);
 
   return (
-    <span
-      style={{
-        whiteSpace: "pre-wrap",
-        wordWrap: "break-word",
-      }}
-    >
-      <span dangerouslySetInnerHTML={{ __html: parsedContent }} />
+    <>
+      <span
+        style={{ whiteSpace: type === "md" ? "pre-wrap" : "collapse" }}
+        dangerouslySetInnerHTML={{ __html: parsedContent }}
+      />
       {cursor && cursorVisible && "|"}
-    </span>
+    </>
   );
 };

@@ -1,7 +1,7 @@
 {
   "name": "react-typewriter-plus",
   "version": "1.0.0",
-  "description": "React component and hook for typewriter text animation.",
+  "description": "React component and hook for animated typewriter effects, supporting plain text, Markdown, and HTML content.",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -12,9 +12,13 @@
   "keywords": [
     "react",
     "typewriter",
-    "animation",
-    "hook",
-    "component"
+    "text animation",
+    "markdown animation",
+    "html animation",
+    "react hook",
+    "react component",
+    "text effect",
+    "typing effect"
   ],
   "scripts": {
     "build": "vite build && tsc"
